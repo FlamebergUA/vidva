@@ -82,6 +82,7 @@ interface PlexSection {
 }
 
 export const fetchPlexAPI = async (endpoint: string) => {
+  console.log("PLEX_SERVER_URL:", PLEX_SERVER_URL)
   const response = await fetch(`${PLEX_SERVER_URL}${endpoint}`, {
     headers: {
       'X-Plex-Token': PLEX_TOKEN,
